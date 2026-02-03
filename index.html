@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Andin Hardiansyah</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f4f4f4;
+    }
+
+    .cv {
+      max-width: 1000px;
+      margin: 30px auto;
+      background: #fff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    /* HEADER */
+    .header {
+      background: #2f3b4c;
+      color: #fff;
+      padding: 40px;
+      position: relative;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 36px;
+      letter-spacing: 1px;
+    }
+
+    .header h1 span {
+      font-weight: 300;
+    }
+
+    .header h2 {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    .photo {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 4px solid #fff;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* CONTENT */
+    .content {
+      display: grid;
+      grid-template-columns: 35% 65%;
+    }
+
+    .left, .right {
+      padding: 30px 40px;
+    }
+
+    .section {
+      margin-bottom: 30px;
+    }
+
+    .section h3 {
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 15px;
+      color: #333;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 8px;
+    }
+
+    /* LEFT */
+    .contact p,
+    .portfolio p {
+      margin: 8px 0;
+      font-size: 14px;
+      color: #444;
+    }
+
+    .contact i,
+    .portfolio i {
+      margin-right: 10px;
+      color: #2f3b4c;
+    }
+
+    .skills ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .skills li {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    /* RIGHT */
+    .summary p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .education p,
+    .experience p {
+      font-size: 14px;
+      margin: 6px 0;
+      color: #444;
+    }
+
+    .job {
+      margin-bottom: 25px;
+    }
+
+    .job h4 {
+      margin: 0;
+      font-size: 15px;
+      color: #000;
+    }
+
+    .job span {
+      font-size: 13px;
+      color: #777;
+    }
+
+    .job ul {
+      margin-top: 10px;
+      padding-left: 18px;
+    }
+
+    .job li {
+      font-size: 14px;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .edu-item{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .edu-left{
+      max-width: 75%;
+    }
+
+    .edu-left strong{
+      font-size: 14px;
+      color: #000;
+    }
+
+    .edu-left div{
+      font-size: 13px;
+      color: #555;
+    }
+
+    .edu-right{
+      font-size: 13px;
+      color: #777;
+      white-space: nowrap;
+    }
+
+    @media(max-width: 768px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .photo {
+        position: static;
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cv">
+    <!-- HEADER -->
+    <div class="header">
+      <h1>ANDIN HARDIANSYAH</h1>
+      <h2>Administration Officer</h2>
+
+      <div class="photo">
+        <img src="https://res.cloudinary.com/dg9p0qutv/image/upload/v1765963106/cv_igixzg.jpg" alt="Foto Profil">
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+      <!-- LEFT -->
+      <div class="left">
+        <div class="section contact">
+          <h3>CONTACT</h3>
+          <p><i class="fa-solid fa-envelope"></i> andinhq2@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i> +6285887588346</p>
+          <p><i class="fa-solid fa-cake-candles"></i> 03 November 1999</p>
+          <p><i class="fa-solid fa-location-dot"></i> Jakarta Timur, DKI Jakarta</p>
+        </div>
+
+        <div class="section portfolio">
+          <h3>PORTFOLIO</h3>
+          <p><i class="fa-solid fa-globe"></i> https://example.com</p>
+        </div>
+
+        <div class="section skills">
+          <h3>SKILLS</h3>
+          <ul>
+            <li>Administrative Tools</li>
+            <li>Photo Editing</li>
+            <li>Data Entry</li>
+            <li>Data Analyst</li>
+            <li>Typing 80 wpm</li>
+            <li>Problem Solver</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="right">
+        <div class="section summary">
+          <h3>SUMMARY</h3>
+          <p>
+            Saya adalah individu yang rapi, terorganisir, serta memiliki kemampuan administrasi yang kuat. Berpengalaman dalam pengelolaan dokumen, pengarsipan, input data, dan dukungan operasional. Mampu bekerja secara mandiri maupun tim, serta terbiasa menggunakan aplikasi perkantoran dan sistem administrasi digital.
+          </p>
+        </div>
+
+        <div class="section education">
+        <h3>EDUCATION</h3>
+        <div class="edu-item">
+          <div class="edu-left">
+            <strong>STMIK Insan Pembangunan</strong>
+            <div>Sistem Informasi (hanya 4 semester)</div>
+          </div>
+          <div class="edu-right">2019 - 2021</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-left">
+            <strong>SMK Mandiri 02</strong>
+            <div>Multimedia</div>
+          </div>
+          <div class="edu-right">2014 - 2017</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-left">
+            <strong>SMP Negeri Kresek 1</strong>
+            <div>Pendidikan Umum</div>
+          </div>
+          <div class="edu-right">2011 - 2014</div>
+        </div>
+
+        <div class="edu-item">
+          <div class="edu-left">
+            <strong>SD Negeri Cibetok 2</strong>
+            <div>Pendidikan Dasar</div>
+          </div>
+          <div class="edu-right">2005 - 2011</div>
+        </div>
+
+      </div>
+
+        <div class="section experience">
+          <h3>WORK EXPERIENCE</h3>
+
+          <div class="job">
+            <h4>Koordinator Spare Part di PT Dimarco Mitra Utama</h4>
+            <span>21 Oktober 2024 - sekarang | Full-Time (Penuh Waktu)</span>
+            <ul>
+              <li>Koordinasi pengelolaan spare part meliputi perencanaan kebutuhan, kontrol stok, penerimaan, penyimpanan, distribusi, monitoring reorder point, pengadaan barang, serta menjaga kualitas dan kelayakan spare part.</li>
+              <li>Pengawasan operasional dan administrasi meliputi akurasi data stok, proses administrasi (PO, DO, Invoice, laporan), penyusunan laporan, koordinasi lintas divisi, evaluasi supplier, serta pengelolaan tim admin/gudang spare part.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h4>Crew Store / Pramuniaga di PT. Sumber Alfaria Trijaya Tbk</h4>
+            <span>18 September 2023 - 23 Agustus 2024| Full-Time (Penuh Waktu)</span>
+            <ul>
+              <li>Melayani pelanggan, operasional kasir, penataan barang, kontrol stok, serta menjaga kebersihan dan standar operasional toko.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h4>Customer Service di CV. Cendana Lestari</h4>
+            <span>07 Juni 2021 - 07 Juni 2023| Full-Time (Penuh Waktu)</span>
+            <ul>
+              <li>Melayani pelanggan, menangani pertanyaan dan keluhan, koordinasi internal, serta menjaga kualitas layanan dan kepuasan pelanggan.</li>
+              <li>Memantau status pesanan dan pengiriman serta menindaklanjuti transaksi pelanggan yang mengalami kendala.</li>
+            </ul>
+          </div>
+
+          <div class="job">
+            <h4>Administrative Officer & Marketing support di PT. Teckindo Prima Gemilang Jaya</h4>
+            <span>03 Januari 2018 - 04 Juni 2021 | Full-Time (Penuh Waktu)</span>
+            <ul>
+              <li>Spare Parts Administrator, Reconditioning & Image Editor.</li>
+              <li>Mengelola seluruh proses administrasi transaksi spare part dan storaging, meliputi Purchase Order (PO), Delivery Order (DO), dan Invoice.</li>
+              <li>Melakukan pengolahan dan pengelolaan gambar spare part (background, sizing, lighting, dan clarity) serta pengelolaan aset visual pada platform online store.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
