@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Andin Hrdiansyah</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    margin:0;
+    font-family: "Georgia", "Times New Roman", serif;
+    background:#ffffff;
+    color:#000;
+}
+
+a{
+    text-decoration:none;
+    color:#0033cc;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+/* ===== HEADER ===== */
+.header{
+    border-bottom:1px solid #ddd;
+    padding:15px 30px;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:bold;
+    color:#2c3e94;
+}
+
+.logo span{
+    font-size:16px;
+    margin-left:5px;
+    color:#000;
+}
+
+/* ===== NAV ===== */
+.nav{
+    display:flex;
+    gap:25px;
+    margin-top:10px;
+    font-size:16px;
+    font-weight:bold;
+}
+
+.nav a{
+    color:#000;
+}
+
+/* ===== SEARCH ===== */
+.search-box{
+    position:absolute;
+    right:30px;
+    top:25px;
+}
+
+.search-box input{
+    padding:6px 10px;
+    width:240px;
+}
+
+/* ===== LAYOUT ===== */
+.container{
+    display:flex;
+    max-width:1200px;
+    margin:30px auto;
+    gap:30px;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main{
+    flex:3;
+}
+
+.main h1{
+    font-size:28px;
+    margin-bottom:5px;
+}
+
+.subtitle{
+    font-size:16px;
+    margin-bottom:25px;
+}
+
+.bio-item{
+    margin-bottom:25px;
+    padding-bottom:20px;
+    border-bottom:1px dotted #999;
+}
+
+.bio-item h2{
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.bio-item p{
+    font-size:16px;
+    line-height:1.6;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    flex:1;
+}
+
+.sidebar h3{
+    font-size:18px;
+    border-bottom:1px solid #ccc;
+    padding-bottom:5px;
+    margin-bottom:10px;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+    margin-bottom:25px;
+}
+
+.sidebar ul li{
+    margin-bottom:8px;
+}
+
+.sidebar a{
+    font-size:15px;
+}
+
+/* ===== FOOTER ===== */
+.footer{
+    border-top:1px solid #ddd;
+    text-align:center;
+    padding:20px;
+    font-size:13px;
+    color:#666;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <div class="logo">
+        Andin <span>Hardiansyah</span>
+    </div>
+
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="https://a-hardiansyah.github.io/biografi/">Portofolio</a>
+        <a href="#">Women</a>
+        <a href="#">100 Famous</a>
+        <a href="#">Blog</a>
+        <a href="#">About</a>
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search biography...">
+        <button>Search</button>
+    </div>
+</div>
+
+<!-- CONTENT -->
+<div class="container">
+
+    <!-- MAIN -->
+    <div class="main">
+        <h1>Biography Online</h1>
+        <div class="subtitle">Biographies of the famous, influential, and inspirational.</div>
+
+        <div class="bio-item">
+            <h2><a href="#">100 people who changed the world</a></h2>
+            <p>
+                People throughout history who influenced and changed the world,
+                from Socrates and Plato to Sir Winston Churchill and John F. Kennedy.
+            </p>
+        </div>
+
+        <div class="bio-item">
+            <h2><a href="#">Famous women who changed the world</a></h2>
+            <p>
+                Over 50 influential women who helped shape the world in which we live.
+                Including; Malala Yousafzai, Indira Gandhi, Susan B. Anthony, Helen Keller,
+                Princess Diana, Joan d’Arc, Greta Thunberg and Mother Teresa.
+            </p>
+        </div>
+
+        <div class="bio-item">
+            <h2><a href="#">Inspirational people</a></h2>
+            <p>
+                A selection of inspirational people who have helped create a better world.
+                Includes Nelson Mandela, Desmond Tutu and Albert Einstein.
+            </p>
+        </div>
+
+        <div class="bio-item">
+            <h2><a href="#">Civil and human rights</a></h2>
+            <p>
+                Biographies of people who fought for justice, equality, and human dignity
+                across different eras and cultures.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <h3>Featured pages</h3>
+        <ul>
+            <li><a href="#">People who made a difference</a></li>
+            <li><a href="#">Human rights activists</a></li>
+            <li><a href="#">People who changed the world</a></li>
+            <li><a href="#">Sporting personalities</a></li>
+            <li><a href="#">People who promoted peace</a></li>
+            <li><a href="#">Famous inventors</a></li>
+            <li><a href="#">Great artists</a></li>
+        </ul>
+
+        <h3>Recent posts</h3>
+        <ul>
+            <li><a href="#">People who made a difference in health care</a></li>
+            <li><a href="#">Facts about the life of Joan of Arc</a></li>
+            <li><a href="#">Famous spies</a></li>
+            <li><a href="#">Famous outlaws</a></li>
+            <li><a href="#">Famous firsts</a></li>
+        </ul>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 Andin Hardiansyah | Administration Officer
+
+</body>
+</html>
