@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Andin Hardiansyah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--border:#eee;--muted:#777;--bg:#fafafa}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:#222;background:#fff}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+    img{max-width:100%;display:block;border-radius:18px}
+
+    header{border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{font-family:"Playfair Display",serif;font-size:26px;color:#7fb6d9}
+    nav a{margin:0 10px;font-weight:500}
+    .search{border:1px solid var(--border);padding:8px 12px;border-radius:999px;color:var(--muted)}
+
+    main{padding:40px 0}
+    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:28px;align-items:center}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+    .title{font-family:"Playfair Display",serif;font-size:36px;margin:0 0 8px}
+    .muted{color:var(--muted)}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+    @media (max-width:800px){.cards{grid-template-columns:1fr 1fr}}
+    @media (max-width:500px){.cards{grid-template-columns:1fr}}
+    .card{border:1px solid var(--border);border-radius:16px;padding:16px;background:var(--bg)}
+
+    .timeline{margin-top:28px;border-left:2px dashed var(--border);padding-left:16px}
+    .item{margin-bottom:16px}
+    .badge{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-size:12px;margin-right:6px;background:#fff}
+
+    footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;color:var(--muted);margin-top:40px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid #111;background:#111;color:#fff;font-weight:600}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Andin Hardiansyah</div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="portofolio.html">Portofolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="search">Search</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero About -->
+    <section class="hero">
+      <div>
+        <h1 class="title">Tentang Saya</h1>
+        <p>
+          Saya adalah <b>Andin Hardiansyah</b>, berpengalaman sebagai
+          <b>Sparepart Coordinator, Administration Officer, Customer Service,</b> dan
+          <b>Marketing Support</b>. Terbiasa mengelola stok sparepart, administrasi data,
+          pembuatan laporan, serta pengolahan visual produk untuk kebutuhan online store
+          dan marketplace.
+        </p>
+        <p class="muted">
+          Saya terbiasa bekerja rapi, teliti, dan terstruktur. Nyaman bekerja dengan data,
+          dokumen, serta koordinasi tim untuk memastikan stok dan informasi produk selalu akurat.
+        </p>
+        <a class="btn" href="portofolio.html">Lihat Portofolio</a>
+      </div>
+      <div>
+        <!-- Ganti dengan foto kamu -->
+        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=900&auto=format&fit=crop" alt="Foto Andin">
+      </div>
+    </section>
+
+    <!-- Skill -->
+    <section class="cards">
+      <div class="card">
+        <h4>Administrasi & Data</h4>
+        <p class="muted">Excel, Google Sheet, laporan stok, input & validasi data.</p>
+      </div>
+      <div class="card">
+        <h4>Inventory & Sparepart</h4>
+        <p class="muted">Pengelolaan stok, pencatatan keluar-masuk barang, rekonsiliasi data.</p>
+      </div>
+      <div class="card">
+        <h4>Visual Produk</h4>
+        <p class="muted">Editing foto (background putih, sharpen, clarity) untuk katalog/marketplace.</p>
+      </div>
+      <div class="card">
+        <h4>Customer Service</h4>
+        <p class="muted">Handling chat pelanggan, komplain, dan follow-up order.</p>
+      </div>
+      <div class="card">
+        <h4>Tools</h4>
+        <p class="muted">Microsoft Office, Google Workspace, Photoshop.</p>
+      </div>
+      <div class="card">
+        <h4>Kecepatan Ketik</h4>
+        <p class="muted">75–80 WPM (mendukung pekerjaan admin & CS).</p>
+      </div>
+    </section>
+
+    <!-- Timeline Pengalaman -->
+    <section class="timeline">
+      <h3>Pengalaman Kerja (Ringkas)</h3>
+      <div class="item">
+        <span class="badge">2024 – Sekarang</span>
+        <b>Sparepart Coordinator</b> — PT Dimarco Mitra Utama  
+        <div class="muted">Kelola stok sparepart, administrasi inventaris, koordinasi kebutuhan teknisi.</div>
+      </div>
+      <div class="item">
+        <span class="badge">Admin & Marketing Support</span>
+        PT Teckindo Prima Gemilang Jaya  
+        <div class="muted">Input data, laporan, dan pengelolaan visual produk untuk online store.</div>
+      </div>
+      <div class="item">
+        <span class="badge">Customer Service</span>
+        CV Cendana Lestari  
+        <div class="muted">Menangani chat pelanggan, komplain, dan follow-up.</div>
+      </div>
+      <div class="item">
+        <span class="badge">Store Crew</span>
+        PT Sumber Alfaria Trijaya Tbk (Alfamart)  
+        <div class="muted">Operasional toko, pelayanan pelanggan, dan stok barang.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 — Andin Hardiansyah
+  </footer>
+</body>
+</html>
