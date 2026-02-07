@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Andin Hardiansyah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--border:#eee;--muted:#777;--bg:#fafafa}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:#222;background:#fff}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
+
+    header{border-bottom:1px solid var(--border);background:#fff;position:sticky;top:0;z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{font-family:"Playfair Display",serif;font-size:26px;color:#7fb6d9}
+    nav a{margin:0 10px;font-weight:500}
+    .search{border:1px solid var(--border);padding:8px 12px;border-radius:999px;color:var(--muted)}
+
+    main{padding:40px 0}
+    .hero{max-width:700px;margin:0 auto 28px;text-align:center}
+    .title{font-family:"Playfair Display",serif;font-size:36px;margin-bottom:8px}
+    .muted{color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:24px}
+    @media (max-width:900px){.grid{grid-template-columns:1fr}}
+
+    .card{border:1px solid var(--border);border-radius:18px;padding:18px;background:var(--bg)}
+    label{display:block;font-size:14px;margin-bottom:6px}
+    input, textarea{
+      width:100%;padding:12px 14px;border-radius:12px;border:1px solid var(--border);
+      font-family:inherit;font-size:14px
+    }
+    textarea{min-height:120px;resize:vertical}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:600px){.row{grid-template-columns:1fr}}
+
+    .btn{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid #111;background:#111;color:#fff;font-weight:600;cursor:pointer}
+    .alt{background:#fff;color:#111;border:1px solid var(--border)}
+
+    .contact-item{display:flex;gap:10px;align-items:center;margin-bottom:10px}
+    .pill{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:6px 10px;font-size:12px;background:#fff}
+
+    footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;color:var(--muted);margin-top:40px}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Andin Hardiansyah</div>
+      <nav>
+        <a href="home.html">Home</a>
+        <a href="portofolio.html">Portofolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="search">Search</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1 class="title">Kontak Saya</h1>
+      <p class="muted">
+        Punya pertanyaan, butuh admin sparepart, atau mau kerja sama?  
+        Kirim pesan lewat form di bawah atau langsung chat WhatsApp 👇
+      </p>
+    </section>
+
+    <section class="grid">
+      <!-- Form -->
+      <div class="card">
+        <h3>Kirim Pesan</h3>
+        <!-- NOTE: Form ini statis. Untuk aktif kirim email, pakai Formspree / EmailJS -->
+        <form onsubmit="event.preventDefault(); alert('Pesan terkirim (demo). Hubungi saya via WhatsApp untuk respon cepat ya 😊');">
+          <div class="row">
+            <div>
+              <label>Nama</label>
+              <input type="text" placeholder="Nama kamu" required>
+            </div>
+            <div>
+              <label>Email</label>
+              <input type="email" placeholder="email@kamu.com" required>
+            </div>
+          </div>
+          <div style="margin-top:12px">
+            <label>Subjek</label>
+            <input type="text" placeholder="Topik pesan">
+          </div>
+          <div style="margin-top:12px">
+            <label>Pesan</label>
+            <textarea placeholder="Tulis pesan kamu..."></textarea>
+          </div>
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap">
+            <button class="btn" type="submit">Kirim Pesan</button>
+            <a class="btn alt" href="https://wa.me/6285882145918" target="_blank">Chat WhatsApp</a>
+          </div>
+        </form>
+      </div>
+
+      <!-- Info Kontak -->
+      <aside class="card">
+        <h3>Info Kontak</h3>
+        <div class="contact-item">
+          <span class="pill">Email</span>
+          <a href="mailto:andinhq2@gmail.com">andinhq2@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span class="pill">WhatsApp</span>
+          <a href="https://wa.me/6285882145918" target="_blank">+62 858-8214-5918</a>
+        </div>
+        <div class="contact-item">
+          <span class="pill">Lokasi</span>
+          <span>DKI Jakarta</span>
+        </div>
+        <p class="muted" style="margin-top:12px">
+          Jam respons tercepat: Senin–Jumat, 09.00–18.00 WIB.
+        </p>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 — Andin Hardiansyah
+  </footer>
+</body>
+</html>
