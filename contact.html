@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Personal Website</title>
+  <title>Contact - Andin Hardiansyah</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     :root{
@@ -24,7 +24,6 @@
     img{max-width:100%;display:block;border-radius:10px}
     .container{max-width:1100px;margin:0 auto;padding:0 16px}
 
-    /* Header */
     header{
       border-bottom:1px solid var(--border);
       background:#fff;
@@ -32,8 +31,7 @@
     }
     .nav{
       display:flex; align-items:center; justify-content:space-between;
-      padding:18px 0;
-      gap:12px;
+      padding:18px 0; gap:12px;
     }
     .brand{
       font-family:"Playfair Display", serif;
@@ -41,12 +39,8 @@
     }
     .brand span{color:#6fbad8}
     nav a{margin:0 10px; color:#333; font-weight:500}
-    .portofolio{
-      border:1px solid var(--border);
-      padding:8px 10px; border-radius:999px; color:var(--muted)
-    }
+    nav a.active{color:#6fbad8; font-weight:600}
 
-    /* Layout */
     main{padding:40px 0}
     .grid{
       display:grid;
@@ -57,7 +51,6 @@
       .grid{grid-template-columns:1fr}
     }
 
-    /* Section title */
     .section-title{
       text-align:left;
       font-family:"Playfair Display", serif;
@@ -65,33 +58,67 @@
       margin-bottom:24px;
     }
 
-    /* Cards */
-    .cards{
-      display:grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap:20px;
-    }
-    @media (max-width: 600px){
-      .cards{grid-template-columns:1fr}
-    }
-    .card{
+    .contact-card{
       border:1px solid var(--border);
       border-radius:14px;
-      overflow:hidden;
+      padding:24px;
       background:#fff;
-      transition:.2s ease;
-    }
-    .card:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.06)}
-    .card .info{padding:12px 14px}
-    .card h4{
-      margin:8px 0 0;
-      font-weight:600;
-      letter-spacing:.6px;
-      font-size:14px;
-      text-transform:uppercase;
     }
 
-    /* Sidebar */
+    .contact-list{
+      display:grid;
+      gap:14px;
+      margin-bottom:24px;
+    }
+
+    .contact-item{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      padding:12px 14px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      transition:.2s ease;
+      background:#fafafa;
+    }
+    .contact-item:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 24px rgba(0,0,0,.06);
+      background:#fff;
+    }
+    .icon{
+      width:36px;height:36px;border-radius:50%;
+      display:grid;place-items:center;
+      border:1px solid var(--border);
+      background:#fff;
+      font-weight:700;
+    }
+
+    form{
+      display:grid;
+      gap:12px;
+      margin-top:16px;
+    }
+    input, textarea{
+      width:100%;
+      padding:12px 14px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      font-family:inherit;
+      font-size:14px;
+    }
+    textarea{min-height:120px; resize:vertical}
+    .btn{
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#111; color:#fff;
+      font-weight:600;
+      cursor:pointer;
+      width:max-content;
+    }
+
     .sidebar{
       position:sticky; top:92px;
       align-self:start;
@@ -117,32 +144,9 @@
       width:36px;height:36px;border:1px solid var(--border);
       border-radius:50%; display:grid; place-items:center;
       background:#fff;
+      transition:.2s;
     }
-
-    .newsletter{
-      margin-top:16px;
-      border:1px dashed var(--border);
-      border-radius:14px;
-      padding:16px;
-      text-align:center;
-      background:#fff;
-    }
-    .newsletter input{
-      width:100%;
-      padding:10px 12px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      margin:8px 0;
-    }
-    .btn{
-      display:inline-block;
-      padding:10px 16px;
-      border-radius:999px;
-      border:1px solid var(--border);
-      background:#111; color:#fff;
-      font-weight:600;
-      cursor:pointer;
-    }
+    .socials a:hover{transform:translateY(-3px); box-shadow:0 6px 14px rgba(0,0,0,.08)}
 
     footer{
       border-top:1px solid var(--border);
@@ -160,46 +164,63 @@
       <nav>
         <a href="home.html">Home</a>  
         <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-      <div class="Portofolio"> </div>
-      <nav>
+        <a href="contact.html" class="active">Contact</a>
         <a href="portofolio.html">Portofolio</a>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <h3 class="section-title">Berikut adalah beberapa perusahaan terakhir saya bekerja...</h3>
+    <h3 class="section-title">Contact</h3>
 
     <div class="grid">
-      <!-- Main content -->
-      <div class="cards">
-        <article class="card">
-          <img src="https://res.cloudinary.com/dg9p0qutv/image/upload/v1770485615/PT_DIMARCO_MITRA_UTAMA_ycfara.png" alt="">
-          <div class="info">
-            <h4>PT DIMARCO MITRA UTAMA</h4>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://res.cloudinary.com/dg9p0qutv/image/upload/v1770485616/PT_SUMBER_ALFARIA_TRIJAYA_TBK_creudk.png" alt="">
-          <div class="info">
-            <h4>PT SUMBER ALFARIA TRIJAYA TBK</h4>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://res.cloudinary.com/dg9p0qutv/image/upload/v1770485615/CV_CENDANA_LESTARI_c8p6b8.png" alt="">
-          <div class="info">
-            <h4>CV CENDANA LESTARI</h4>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://res.cloudinary.com/dg9p0qutv/image/upload/v1770485615/PT_TECKINDO_PRIMA_GEMILANG_JAYA_ljqysj.png" alt="">
-          <div class="info">
-            <h4>PT TECKINDO PRIMA GEMILANG JAYA</h4>
-          </div>
-        </article>
-      </div>
+      <!-- Konten Contact -->
+      <section class="contact-card">
+        <p class="muted">
+          Jika ingin bekerja sama, diskusi proyek, atau sekadar menyapa, silakan hubungi saya melalui kontak di bawah ini atau kirim pesan langsung.
+        </p>
+
+        <div class="contact-list">
+          <a class="contact-item" href="mailto:andinhq2@gmail.com">
+            <div class="icon">✉️</div>
+            <div>
+              <strong>Email</strong><br/>
+              <span class="muted">andinhq2@gmail.com</span>
+            </div>
+          </a>
+
+          <a class="contact-item" href="https://facebook.com/usernamekamu" target="_blank">
+            <div class="icon">f</div>
+            <div>
+              <strong>Facebook</strong><br/>
+              <span class="muted">facebook.com/usernamekamu</span>
+            </div>
+          </a>
+
+          <a class="contact-item" href="https://instagram.com/usernamekamu" target="_blank">
+            <div class="icon">📷</div>
+            <div>
+              <strong>Instagram</strong><br/>
+              <span class="muted">instagram.com/usernamekamu</span>
+            </div>
+          </a>
+
+          <a class="contact-item" href="https://linkedin.com/in/usernamekamu" target="_blank">
+            <div class="icon">in</div>
+            <div>
+              <strong>LinkedIn</strong><br/>
+              <span class="muted">linkedin.com/in/usernamekamu</span>
+            </div>
+          </a>
+        </div>
+
+        <form>
+          <input type="text" placeholder="Nama kamu" required>
+          <input type="email" placeholder="Email kamu" required>
+          <textarea placeholder="Pesan kamu..."></textarea>
+          <button class="btn" type="submit">Kirim Pesan</button>
+        </form>
+      </section>
 
       <!-- Sidebar -->
       <aside class="sidebar">
@@ -210,30 +231,18 @@
             Admin sparepart, CS, dan marketing support. Fokus pada pengelolaan stok & visual produk untuk online store.
           </p>
           <div class="socials">
-            <a href="#" title="Email">✉️</a>
-            <a href="#" title="Facebook">f</a>
-            <a href="#" title="Instagram">📷</a>
-            <a href="#" title="LinkedIn">in</a>
+            <a href="mailto:andinhq2@gmail.com" title="Email">✉️</a>
+            <a href="https://facebook.com/usernamekamu" target="_blank">f</a>
+            <a href="https://instagram.com/usernamekamu" target="_blank">📷</a>
+            <a href="https://linkedin.com/in/usernamekamu" target="_blank">in</a>
           </div>
-        </div>
-
-        <div class="newsletter">
-          <h4>Mau update terbaru?</h4>
-          <p class="muted">Masukkan email kamu 👇</p>
-          <input type="email" placeholder="email@kamu.com"/>
-          <button class="btn">Subscribe</button>
         </div>
       </aside>
     </div>
   </main>
 
   <footer>
-    © 2026 — Personal Website
+    © 2026 — Andin Hardiansyah
   </footer>
 </body>
 </html>
-
-
-
-
-
