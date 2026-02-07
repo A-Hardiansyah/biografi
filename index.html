@@ -1,243 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Andin Hrdiansyah</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --primary:#8ecae6;
+      --text:#222;
+      --muted:#777;
+      --border:#eee;
+      --bg:#fafafa;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background:#fff;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block;border-radius:10px}
+    .container{max-width:1100px;margin:0 auto;padding:0 16px}
 
-<style>
-body{
-    margin:0;
-    font-family: "Georgia", "Times New Roman", serif;
-    background:#ffffff;
-    color:#000;
-}
+    /* Header */
+    header{
+      border-bottom:1px solid var(--border);
+      background:#fff;
+      position:sticky; top:0; z-index:10;
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:18px 0;
+      gap:12px;
+    }
+    .brand{
+      font-family:"Playfair Display", serif;
+      font-size:26px; letter-spacing:.5px;
+    }
+    .brand span{color:#6fbad8}
+    nav a{margin:0 10px; color:#333; font-weight:500}
+    .search{
+      border:1px solid var(--border);
+      padding:8px 10px; border-radius:999px; color:var(--muted)
+    }
 
-a{
-    text-decoration:none;
-    color:#0033cc;
-}
+    /* Layout */
+    main{padding:40px 0}
+    .grid{
+      display:grid;
+      grid-template-columns: 2.2fr 1fr;
+      gap:32px;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+    }
 
-a:hover{
-    text-decoration:underline;
-}
+    /* Section title */
+    .section-title{
+      text-align:center;
+      font-family:"Playfair Display", serif;
+      letter-spacing:2px;
+      margin-bottom:24px;
+    }
 
-/* ===== HEADER ===== */
-.header{
-    border-bottom:1px solid #ddd;
-    padding:15px 30px;
-}
+    /* Cards */
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:20px;
+    }
+    @media (max-width: 600px){
+      .cards{grid-template-columns:1fr}
+    }
+    .card{
+      border:1px solid var(--border);
+      border-radius:14px;
+      overflow:hidden;
+      background:#fff;
+      transition:.2s ease;
+    }
+    .card:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.06)}
+    .card .info{padding:12px 14px}
+    .card h4{
+      margin:8px 0 0;
+      font-weight:600;
+      letter-spacing:.6px;
+      font-size:14px;
+      text-transform:uppercase;
+    }
 
-.logo{
-    font-size:32px;
-    font-weight:bold;
-    color:#2c3e94;
-}
+    /* Sidebar */
+    .sidebar{
+      position:sticky; top:92px;
+      align-self:start;
+    }
+    .profile{
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:18px;
+      text-align:center;
+      background:var(--bg);
+    }
+    .avatar{
+      width:90px;height:90px;border-radius:50%;
+      margin:0 auto 10px; object-fit:cover;
+      border:3px solid #fff;
+      box-shadow:0 6px 18px rgba(0,0,0,.1);
+    }
+    .muted{color:var(--muted); font-size:14px}
+    .socials{
+      display:flex; justify-content:center; gap:10px; margin-top:10px;
+    }
+    .socials a{
+      width:36px;height:36px;border:1px solid var(--border);
+      border-radius:50%; display:grid; place-items:center;
+      background:#fff;
+    }
 
-.logo span{
-    font-size:16px;
-    margin-left:5px;
-    color:#000;
-}
+    .newsletter{
+      margin-top:16px;
+      border:1px dashed var(--border);
+      border-radius:14px;
+      padding:16px;
+      text-align:center;
+      background:#fff;
+    }
+    .newsletter input{
+      width:100%;
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      margin:8px 0;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:999px;
+      border:1px solid var(--border);
+      background:#111; color:#fff;
+      font-weight:600;
+      cursor:pointer;
+    }
 
-/* ===== NAV ===== */
-.nav{
-    display:flex;
-    gap:25px;
-    margin-top:10px;
-    font-size:16px;
-    font-weight:bold;
-}
-
-.nav a{
-    color:#000;
-}
-
-/* ===== SEARCH ===== */
-.search-box{
-    position:absolute;
-    right:30px;
-    top:25px;
-}
-
-.search-box input{
-    padding:6px 10px;
-    width:240px;
-}
-
-/* ===== LAYOUT ===== */
-.container{
-    display:flex;
-    max-width:1200px;
-    margin:30px auto;
-    gap:30px;
-}
-
-/* ===== MAIN CONTENT ===== */
-.main{
-    flex:3;
-}
-
-.main h1{
-    font-size:28px;
-    margin-bottom:5px;
-}
-
-.subtitle{
-    font-size:16px;
-    margin-bottom:25px;
-}
-
-.bio-item{
-    margin-bottom:25px;
-    padding-bottom:20px;
-    border-bottom:1px dotted #999;
-}
-
-.bio-item h2{
-    font-size:22px;
-    margin-bottom:8px;
-}
-
-.bio-item p{
-    font-size:16px;
-    line-height:1.6;
-}
-
-/* ===== SIDEBAR ===== */
-.sidebar{
-    flex:1;
-}
-
-.sidebar h3{
-    font-size:18px;
-    border-bottom:1px solid #ccc;
-    padding-bottom:5px;
-    margin-bottom:10px;
-}
-
-.sidebar ul{
-    list-style:none;
-    padding:0;
-    margin-bottom:25px;
-}
-
-.sidebar ul li{
-    margin-bottom:8px;
-}
-
-.sidebar a{
-    font-size:15px;
-}
-
-/* ===== FOOTER ===== */
-.footer{
-    border-top:1px solid #ddd;
-    text-align:center;
-    padding:20px;
-    font-size:13px;
-    color:#666;
-    margin-top:40px;
-}
-</style>
+    footer{
+      border-top:1px solid var(--border);
+      padding:24px 0;
+      text-align:center;
+      color:var(--muted);
+      margin-top:40px;
+    }
+  </style>
 </head>
-
 <body>
-
-<!-- HEADER -->
-<div class="header">
-    <div class="logo">
-        Andin <span>Hardiansyah</span>
+  <header>
+    <div class="container nav">
+      <div class="brand"><span>Andin</span> Hardiansyah</div>
+      <nav>
+        <a href="#">Home</a>
+        <a href="https://a-hardiansyah.github.io/biografi/portofolio.html">Portofolio</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="search">Search</div>
     </div>
+  </header>
 
-    <div class="nav">
-        <a href="#">biografi</a>
-        <a href="portofolio.html">Portofolio</a>
-        <a href="https://a-hardiansyah.github.io/spart-web/">project</a>
-        <a href="https://a-hardiansyah.github.io/spart-web/">contact</a>
-        <a href="https://a-hardiansyah.github.io/spart-web/">social media</a>
-    </div>
+  <main class="container">
+    <h3 class="section-title">LATEST PROJECTS...</h3>
 
-    <div class="search-box">
-        <input type="text" placeholder="Search biography...">
-        <button>Search</button>
-    </div>
-</div>
+    <div class="grid">
+      <!-- Main content -->
+      <div class="cards">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop" alt="">
+          <div class="info">
+            <h4>Enhancement Foto Produk</h4>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop" alt="">
+          <div class="info">
+            <h4>Background Putih Clean</h4>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1200&auto=format&fit=crop" alt="">
+          <div class="info">
+            <h4>Retouch & Sharpen</h4>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop" alt="">
+          <div class="info">
+            <h4>Produk Marketplace</h4>
+          </div>
+        </article>
+      </div>
 
-<!-- CONTENT -->
-<div class="container">
-
-    <!-- MAIN -->
-    <div class="main">
-        <h1>Achievements</h1>
-        <div class="subtitle">Below is a summary of my professional achievements and contributions throughout my career in administration and inventory/sparepart management.</div>
-
-        <div class="bio-item">
-            <h2><a href="https://a-hardiansyah.github.io/spart-web/">PT Dimarco Mitra Utama</a></h2>
-            <p>
-                Managed end-to-end spare part operations including demand planning, receiving, storage, and distribution to support daily operational activities. Monitored reorder points and procurement processes to maintain optimal stock availability. Improved inventory data accuracy through structured and organized stock recording. Prepared regular spare part administrative reports to support operational evaluation. Coordinated cross-functional teams and supervised admin/warehouse staff to ensure efficient workflow.
-            </p>
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="profile">
+          <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=300&auto=format&fit=crop" alt="">
+          <h3>Halo, saya Hardi 👋</h3>
+          <p class="muted">
+            Admin sparepart, CS, dan marketing support. Fokus pada pengelolaan stok & visual produk untuk online store.
+          </p>
+          <div class="socials">
+            <a href="#" title="Email">✉️</a>
+            <a href="#" title="Facebook">f</a>
+            <a href="#" title="Instagram">📷</a>
+            <a href="#" title="LinkedIn">in</a>
+          </div>
         </div>
 
-        <div class="bio-item">
-            <h2><a href="#">PT ALFARIA TRIJAYA TBK</a></h2>
-            <p>
-                (ISI)
-            </p>
+        <div class="newsletter">
+          <h4>Mau update terbaru?</h4>
+          <p class="muted">Masukkan email kamu 👇</p>
+          <input type="email" placeholder="email@kamu.com"/>
+          <button class="btn">Subscribe</button>
         </div>
-
-        <div class="bio-item">
-            <h2><a href="#">CV CENDANA LESTARI</a></h2>
-            <p>
-                (ISI)
-            </p>
-        </div>
-
-        <div class="bio-item">
-            <h2><a href="#">PT TECKINDO PRIMA GEMILANG JAYA</a></h2>
-            <p>
-                (ISI)    
-            </p>
-        </div>
-
+      </aside>
     </div>
+  </main>
 
-    <!-- SIDEBAR -->
-    <div class="sidebar">
-
-        <h3>Featured pages</h3>
-        <ul>
-            <li><a href="#">People who made a difference</a></li>
-            <li><a href="#">Human rights activists</a></li>
-            <li><a href="#">People who changed the world</a></li>
-            <li><a href="#">Sporting personalities</a></li>
-            <li><a href="#">People who promoted peace</a></li>
-            <li><a href="#">Famous inventors</a></li>
-            <li><a href="#">Great artists</a></li>
-        </ul>
-
-        <h3>Recent posts</h3>
-        <ul>
-            <li><a href="#">People who made a difference in health care</a></li>
-            <li><a href="#">Facts about the life of Joan of Arc</a></li>
-            <li><a href="#">Famous spies</a></li>
-            <li><a href="#">Famous outlaws</a></li>
-            <li><a href="#">Famous firsts</a></li>
-        </ul>
-
-    </div>
-
-</div>
-
-<!-- FOOTER -->
-<div class="footer">
-    © 2026 Andin Hardiansyah | Administration Officer
-
+  <footer>
+    © 2026 — Personal Website
+  </footer>
 </body>
 </html>
-
-
-
-
-
-
